@@ -9,7 +9,7 @@ pipeline {
             
           },
           "b": {
-            sleep 60
+            sleep 6
             
           },
           "c": {
