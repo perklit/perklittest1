@@ -3,7 +3,30 @@ pipeline {
   stages {
     stage('a') {
       steps {
-        sh 'ls'
+        parallel(
+          "a": {
+            sh 'ls'
+            
+          },
+          "b": {
+            sleep 60
+            
+          },
+          "c": {
+            sleep 10
+            
+          }
+        )
+      }
+    }
+    stage('aa') {
+      steps {
+        isUnix()
+      }
+    }
+    stage('aaa') {
+      steps {
+        error 'error1'
       }
     }
   }
