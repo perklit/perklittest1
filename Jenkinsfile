@@ -13,7 +13,7 @@ pipeline {
             
           },
           "c": {
-            sleep 10
+            sleep 8
             
           }
         )
